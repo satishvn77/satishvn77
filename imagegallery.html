@@ -1,0 +1,67 @@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Gallery</title>
+
+    <style>
+        #images {
+            position: absolute;
+            top: 60%;
+        }
+
+        #screen {
+            position: absolute;
+            top: 10%;
+            height: 40%;
+            width: 80%;
+            border: 2px solid red;
+        }
+    </style>
+
+    <script>
+        function display(e) {
+
+            //e += ".jpg";
+            alert(e);
+            var Img = document.createElement("img");
+            document.getElementById("screen").appendChild(Img);
+            Img.setAttribute("src", e);
+            Img.setAttribute("height", "200 px");
+            Img.setAttribute("width", "200 px");
+        }
+
+        function remove(obj) {
+            alert(obj);
+            document.querySelector("screen").removeChild();
+            //let img5 = document.getElementById(obj);
+            // alert(img5);
+            // screen1.append("img");
+
+            //let img5 = screen1.getElementsByTagNameNS("obj");
+            //img5.remove();
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="screen">
+
+
+    </div>
+    <div id="images">
+
+        <img src="image1.jpg" height="250px" width="250px" id="img1" onmouseover="display(this.src)"
+            onmouseout="remove(this.id)" />
+        <img src="image2.jpg" height="250px" width="250px" id="img2" onmouseover="display(this.src)"
+            onmouseout="remove(this.id)" />
+        <img src="image3.jpg" height="250px" width="250px" id="img3" onmouseover="display(this.src)"
+            onmouseout="remove(this.id)" />
+        <img src="image5.jpg" height="250px" width="250px" id="img4" onmouseover="display(this.src)"
+            onmouseout="remove(this.id)" />
+
+    </div>
+
+</body>
+
+</html>
